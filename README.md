@@ -1,9 +1,9 @@
 # GoogleAuthenticator
-Simple, easy to use server-side two-factor authentication library for .NET Core that works with Google Authenticator
+Simple, easy to use server-side two-factor authentication library for .NET that works with Google Authenticator
 
-[![Build status](https://ci.appveyor.com/api/projects/status/af654g26n9l3840p?svg=true)](https://ci.appveyor.com/project/BrandonPotter/googleauthenticator)
+Updated to .Net Core 5 from [https://github.com/BrandonPotter/GoogleAuthenticator](BrandonPotter/GoogleAuthenticator)
 
-[`Install-Package GoogleAuthenticator`](https://www.nuget.org/packages/GoogleAuthenticator)
+[![Build status](https://ci.appveyor.com/api/projects/status/n7plk5m8dmaoph15?svg=true)](https://ci.appveyor.com/project/mschnee/googleauthenticator)
 
 See blog post for usage instructions:
 
