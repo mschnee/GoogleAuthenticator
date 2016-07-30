@@ -8,14 +8,14 @@
       "version": "1.0.0"
     },
     "xunit": "2.1.0-*",
-    "xunit.runner.dnx": "2.1.0-*",
-    "dotnet-test-xunit": "2.1.0-*",
+    "xunit.runner.console": "2.1.0-*",
+    "dotnet-test-xunit": "2.2.0-*",
     "Google.Authenticator": {
        "target": "project"
     }
   },
   "commands": {
-      "test": "xunit.runner.dnx"
+      "test": "xunit.runner.console"
   },
   "frameworks": {
     "netcoreapp1.0": {
