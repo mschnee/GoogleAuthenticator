@@ -1,34 +1,33 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
-namespace Google.Authenticator.Tests
+namespace Google.Authenticator.Test
 {
-    [TestClass]
     public class KeyFinderTest
     {
-        public static DateTime _epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
-        [TestMethod]
+        [Fact]
         public void FindIterationNumber()
         {
             string secretKey = "PJWUMZKAUUFQKJBAMD6VGJ6RULFVW4ZH";
             string targetCode = "267762";
 
             TwoFactorAuthenticator tfa = new TwoFactorAuthenticator();
-            var mins = DateTime.UtcNow.Subtract(_epoch).TotalMinutes;
 
             long currentTime = 1416643820;
 
-            for (long i = currentTime; i >= 0; i=i-60)
+            // we're going to count backwards from a specified date to a known time, I think
+            for (long i = currentTime; i >= 0; i = i - 60)
             {
                 var result = tfa.GeneratePINAtInterval(secretKey, i, 6);
                 if (result == targetCode)
                 {
-                    Assert.IsTrue(true);
+                    Assert.True(true);
+                    return;
                 }
             }
 
-            Assert.IsTrue(false);
+            Assert.True(false);
         }
     }
+
 }
